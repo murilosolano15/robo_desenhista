@@ -1,0 +1,71 @@
+void setup() {
+  pinMode(5, OUTPUT);
+  pinMode(6, OUTPUT);
+  pinMode(9, OUTPUT);
+  pinMode(10, OUTPUT);
+  
+}
+
+void loop() {
+  seguirFrente();
+  delay(1000);
+  seguirdireita();
+  delay(2000);
+  parar();
+  delay(1000);
+  seguiresquerda();
+  delay(2000);
+  pararr();
+  delay(1000);
+}
+  /* área de funções */
+
+//função seguir frente 
+
+void seguirFrente(){
+  analogWrite(5,150);
+  digitalWrite(6, LOW);
+  analogWrite(9,150);
+  digitalWrite(10, LOW);
+}
+
+
+ //função seguirdireita
+
+void seguirdireita(){
+ 
+ analogWrite(5,150);
+ digitalWrite(9, LOW);
+ analogWrite(6, LOW);
+ digitalWrite(10, LOW);
+ }
+
+ 
+ //função parar
+ void parar(){
+
+  analogWrite(5, LOW);
+  digitalWrite(6, LOW);
+  analogWrite(9, LOW);
+  digitalWrite(10, LOW);
+ }
+
+ 
+ //função seguiresquerda
+
+void seguiresquerda(){
+ 
+ analogWrite(9,200);
+ digitalWrite(5, LOW);
+ analogWrite(6, LOW);
+ digitalWrite(10, LOW);
+ }
+
+  //função parar
+ void pararr(){
+
+  analogWrite(5, LOW);
+  digitalWrite(6, LOW);
+  analogWrite(9, LOW);
+  digitalWrite(10, LOW);
+ }
